@@ -40,7 +40,7 @@ BluetoothPlatform.prototype.configureAccessory = function (homebridgeAccessory) 
   var bluetoothAccessory = this.bluetoothAccessories[accessoryAddress];
   if (!bluetoothAccessory) {
     this.log.debug("Removed | " + homebridgeAccessory.displayName + " (" + accessoryAddress + ")");
-    this.homebridgeAPI.unregisterPlatformAccessories("homebridge-bluetooth", "Bluetooth",
+    this.homebridgeAPI.unregisterPlatformAccessories("homebridge-satchiled", "Bluetooth",
                                                      [homebridgeAccessory]);
     return;
   }
@@ -98,7 +98,7 @@ BluetoothPlatform.prototype.connect = function (error, nobleAccessory) {
     homebridgeAccessory = new Accessory(bluetoothAccessory.name,
                                         UUIDGen.generate(bluetoothAccessory.name));
     homebridgeAccessory.context['address'] = accessoryAddress;
-    this.homebridgeAPI.registerPlatformAccessories("homebridge-bluetooth", "Bluetooth",
+    this.homebridgeAPI.registerPlatformAccessories("homebridge-satchiled", "Bluetooth",
                                                    [homebridgeAccessory]);
   } else {
     delete this.cachedHomebridgeAccessories[accessoryAddress];

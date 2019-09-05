@@ -1,19 +1,19 @@
 
 # jhays-fork
 
-I forked this to try and get a Satechi LED strip to work with homebridge. 
+I forked this to try and get a Satechi LED strip to work with homebridge.
 
-# homebridge-bluetooth
+# homebridge-satchiled
 
 
-[![NPM version](https://badge.fury.io/js/homebridge-bluetooth.svg)](https://badge.fury.io/js/homebridge-bluetooth)
+[![NPM version](https://badge.fury.io/js/homebridge-satchiled.svg)](https://badge.fury.io/js/homebridge-satchiled)
 
 [Homebridge](https://github.com/nfarina/homebridge) plugin for exposing services and
 characteristics of nearby [Bluetooth Low Energy](https://www.bluetooth.com/what-is-bluetooth-technology/bluetooth-technology-basics/low-energy) (BLE) peripherals as [HomeKit](https://www.apple.com/ios/home/) accesories. Ideal for wireless DIY home automation projects if you'd like to control them comfortably with Siri on any Apple device.
 
 <img src="images/overview.jpg">
 
-Homebridge runs on top of [Node.js](https://nodejs.org) server and is an open-source implementation of the Apple HomeKit protocol. HomeKit provides the API between your Apple device (i.e. Watch) and your home automation server (i.e. Raspberry Pi). This Homebridge [plugin](https://www.npmjs.com/package/homebridge-bluetooth) relays the communication from the home automation server to the BLE peripheral device (i.e. Arduino 101). Take a peek into the [examples](/examples/) folder for inspiration.
+Homebridge runs on top of [Node.js](https://nodejs.org) server and is an open-source implementation of the Apple HomeKit protocol. HomeKit provides the API between your Apple device (i.e. Watch) and your home automation server (i.e. Raspberry Pi). This Homebridge [plugin](https://www.npmjs.com/package/homebridge-satchiled) relays the communication from the home automation server to the BLE peripheral device (i.e. Arduino 101). Take a peek into the [examples](/examples/) folder for inspiration.
 
 
 
@@ -27,7 +27,7 @@ Make sure your systems matches the [prerequisites](#what-are-the-prerequisites-f
 ```sh
 [sudo] npm install -g noble
 [sudo] npm install -g --unsafe-perm homebridge node-gyp
-[sudo] npm install -g homebridge-bluetooth
+[sudo] npm install -g homebridge-satchiled
 ```
 
 **Note** _Depending on your privileges `-g` flag may need root permissions to install to the global `npm` module directory._
@@ -100,7 +100,7 @@ Depending on your privileges, accessing the BLE kernel subsystem may need root p
 
 ## Troubleshooting
 
-If you encouter a different problem, please, open an [issue](https://github.com/vojtamolda/homebridge-bluetooth/issues).
+If you encouter a different problem, please, open an [issue](https://github.com/vojtamolda/homebridge-satchiled/issues).
 
 ### Home app can't discover any nearby accessories
 Make sure the Apple device and the Homebridge server are on the same subnet and connected to the same wifi router.

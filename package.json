@@ -1,7 +1,7 @@
 {
-  "name": "homebridge-bluetooth",
+  "name": "homebridge-satchiled",
   "description": "Homebridge plugin that exposes Bluetooth peripherals as HomeKit accessories",
-  "author": "Vojta Molda",
+  "author": "Vojta Molda, Julian Hays",
   "version": "0.1.7",
   "license": "MIT",
   "keywords": [
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/vojtamolda/homebridge-bluetooth.git"
+    "url": "git://github.com/jhays/homebridge-satchiled.git"
   },
   "bugs": {
-    "url": "https://github.com/vojtamolda/homebridge-bluetooth/issues"
+    "url": "https://github.com/jhays/homebridge-satchiled/issues"
   },
   "engines": {
     "node": ">=4.3.2",
