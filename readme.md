@@ -1,4 +1,8 @@
 
+# jhays-fork
+
+I forked this to try and get a Satechi LED strip to work with homebridge. 
+
 # homebridge-bluetooth
 
 
