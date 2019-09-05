@@ -6,15 +6,15 @@ module.exports = function (noble, uuidGen, accessory, bluetoothAccessory) {
   Accessory = accessory;
   BluetoothAccessory = bluetoothAccessory;
 
-  return BluetoothPlatform;
+  return SatechiLEDPlatform;
 };
 
 
-function BluetoothPlatform(log, config, homebridgeAPI) {
+function SatechiLEDPlatform(log, config, homebridgeAPI) {
   this.log = log;
 
   if (!config) {
-    this.log.warn("Missing mandatory platform config named 'Bluetooth'");
+    this.log.warn("Missing mandatory platform config named 'SatechiLEDPlatform'");
     return;
   }
 
@@ -40,7 +40,7 @@ BluetoothPlatform.prototype.configureAccessory = function (homebridgeAccessory) 
   var bluetoothAccessory = this.bluetoothAccessories[accessoryAddress];
   if (!bluetoothAccessory) {
     this.log.debug("Removed | " + homebridgeAccessory.displayName + " (" + accessoryAddress + ")");
-    this.homebridgeAPI.unregisterPlatformAccessories("homebridge-satchiled", "Bluetooth",
+    this.homebridgeAPI.unregisterPlatformAccessories("homebridge-satchiled", "SatechiLED",
                                                      [homebridgeAccessory]);
     return;
   }
@@ -98,7 +98,7 @@ BluetoothPlatform.prototype.connect = function (error, nobleAccessory) {
     homebridgeAccessory = new Accessory(bluetoothAccessory.name,
                                         UUIDGen.generate(bluetoothAccessory.name));
     homebridgeAccessory.context['address'] = accessoryAddress;
-    this.homebridgeAPI.registerPlatformAccessories("homebridge-satchiled", "Bluetooth",
+    this.homebridgeAPI.registerPlatformAccessories("homebridge-satchiled", "SatechiLED",
                                                    [homebridgeAccessory]);
   } else {
     delete this.cachedHomebridgeAccessories[accessoryAddress];
